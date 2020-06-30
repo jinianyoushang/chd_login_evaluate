@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+
+    <title>{% block title %}{% endblock %}自动评教反馈建议</title>
+
+</head>
+    <body>
+    <h1>自动评教反馈建议</h1>
+      
+    <p><li><a href="{{ url_for('index') }}">返回首页</a></li></p>
+    
+    <form  method="POST"  >
+        <div class="form-group">
+            <textarea style="width: 300px;height: 200px; " id="box" name="feedback_content" placeholder="请输入您的建议"></textarea>
+        <br><br>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-warning btn-block" id="submit-btn" src="{{ url_for('feedback') }}"> 提交  </button>
+        </div>
+    </form>
+    </body>
+</html>

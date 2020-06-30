@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+
+    <title>{% block title %}{% endblock %}自动评教</title>
+
+</head>
+<body>
+    <h1>欢迎来到长安大学自动评教</h1>
+    
+    <p>当前已有{{use_times}}人次使用</p>
+    
+    <li><a href="{{ url_for('index') }}">返回首页</a></li>
+    <br>
+    {% block body %}
+    {% endblock %}
+    <form  method="POST"  >
+        <div class="form-group">
+            <input type="text" class="form-control" name="username" placeholder="学号">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="密码">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-warning btn-block" id="submit-btn" src="{{ url_for('index') }}">立即评教</button>
+        </div>
+    </form>
+    <p>提交后请耐心等待</p>
+    
+    <p><li><a href="https://wws.lanzous.com/i2sUxdwekuj">客户端版蓝奏云链接： https://wws.lanzous.com/i2sUxdwekuj</a></li></p>
+    
+    <p><li><a href="https://pan.baidu.com/s/1TEKXTdjtHl7iV-8T_ykfaQ">客户端版百度云链接 链接：https://pan.baidu.com/s/1TEKXTdjtHl7iV-8T_ykfaQ 
+提取码：qnbx
+</a></li></p>
+    <li><a href="{{ url_for('test_connect') }}">测试连接</a></li>
+    <li><a href="{{ url_for('feedback') }}">反馈建议</a></li> 
+</body>
+</html>
